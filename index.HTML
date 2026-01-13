@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FLASHCARDS (3.0) – Português Brasileiro x Inglês</title>
+
+<style>
+:root{
+  --blue:#4285F4;
+  --green:#34A853;
+  --red:#EA4335;
+  --yellow:#FBBC05;
+  --purple:#7B1FA2;
+}
+
+body{
+  font-family:'Segoe UI',Tahoma,sans-serif;
+  background:#f5f7fa;
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+h1{
+  text-align:center;
+  border-bottom:2px solid #e2e8f0;
+  padding-bottom:10px;
+}
+
+.subtitle{
+  text-align:center;
+  font-style:italic;
+  color:#555;
+  margin-bottom:30px;
+}
+
+.flashcards-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:20px;
+}
+
+.flashcard{
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 4px 6px rgba(0,0,0,.1);
+  padding:20px;
+  cursor:pointer;
+  transition:.3s;
+  border-left:5px solid var(--blue);
+}
+
+.flashcard:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 15px rgba(0,0,0,.15);
+}
+
+.header{
+  font-weight:700;
+  font-size:1.2rem;
+  margin-bottom:12px;
+}
+
+.content{display:none;}
+.content.active{display:block; animation:fade .4s;}
+
+@keyframes fade{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+.question{
+  background:#f8fafc;
+  padding:10px;
+  border-radius:8px;
+  font-weight:600;
+}
+
+.answer{
+  background:#ebf8ff;
+  padding:10px;
+  border-left:3px solid var(--blue);
+  border-radius:8px;
+  margin-top:10px;
+}
+
+.explanation{
+  background:#f0fff4;
+  padding:10px;
+  border-left:3px solid var(--green);
+  border-radius:8px;
+  margin-top:10px;
+}
+
+.examples{
+  background:#fff5f5;
+  padding:10px;
+  border-left:3px solid var(--red);
+  border-radius:8px;
+  margin-top:10px;
+}
+
+.practice{
+  background:#f3e5f5;
+  padding:10px;
+  border-left:3px solid var(--purple);
+  border-radius:8px;
+  margin-top:10px;
+}
+
+.example-item{
+  margin-bottom:6px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>📚 FLASHCARDS (3.0)</h1>
+<div class="subtitle">Diferenças entre Português Brasileiro × Inglês</div>
+
+<div class="flashcards-container">
+
+<!-- 1 -->
+<div class="flashcard" onclick="toggle(this)">
+<div class="header">🔵 Ordem das Palavras</div>
+<div class="content">
+<div class="question">A ordem das palavras é a mesma?</div>
+<div class="answer">
+❌ Não.<br>
+Português: flexível<br>
+Inglês: fixa (SVO)
+</div>
+<div class="explanation">
+O inglês depende da ordem para sentido.  
+O português usa flexão verbal.
+</div>
+<div class="examples">
+<div class="example-item">🇧🇷 Ontem eu comprei um carro.</div>
+<div class="example-item">🇧🇷 Eu comprei um carro ontem.</div>
+<div class="example-item">🇺🇸 I bought a car yesterday.</div>
+<div class="example-item">❌ Bought I a car yesterday.</div>
+</div>
+</div>
+</div>
+
+<!-- 2 -->
+<div class="flashcard" onclick="toggle(this)">
+<div class="header">🔵 Uso do Sujeito</div>
+<div class="content">
+<div class="question">O sujeito pode ser omitido?</div>
+<div class="answer">❌ Não em inglês.</div>
+<div class="explanation">
+O inglês exige sujeito explícito.
+</div>
+<div class="examples">
+<div class="example-item">🇧🇷 Fui ao médico.</div>
+<div class="example-item">🇺🇸 I went to the doctor.</div>
+<div class="example-item">❌ Went to the doctor.</div>
+</div>
+</div>
+</div>
+
+<!-- 3 -->
+<div class="flashcard" onclick="toggle(this)">
+<div class="header">🔵 Conjugação Verbal</div>
+<div class="content">
+<div class="question">Os verbos mudam muito?</div>
+<div class="answer">🔹 Pouco em inglês.</div>
+<div class="explanation">
+Português tem muitas conjugações.  
+Inglês usa auxiliares.
+</div>
+<div class="examples">
+<div class="example-item">🇧🇷 Eu falo / Tu falas / Ele fala</div>
+<div class="example-item">🇺🇸 I speak / You speak / He speaks</div>
+</div>
+</div>
+</div>
+
+<!-- 4 -->
+<div class="flashcard" onclick="toggle(this)">
+<div class="header">🔵 Auxiliares (DO / DOES / DID)</div>
+<div class="content">
+<div class="question">Por que tantos auxiliares?</div>
+<div class="answer">Substituem flexões verbais.</div>
+<div class="explanation">
+Usados para perguntas, negativas e ênfase.
+</div>
+<div class="examples">
+<div class="example-item">Do you like coffee?</div>
+<div class="example-item">I don’t understand.</div>
+<div class="example-item">Did you call her?</div>
+</div>
+</div>
+</div>
+
+<!-- 5 -->
+<div class="flashcard" onclick="toggle(this)">
+<div class="header">🔵 Verbos Simples x Phrasal Verbs</div>
+<div class="content">
+<div class="question">Por que tantos phrasal verbs?</div>
+<div class="answer">O inglês prefere combinações.</div>
+<div class="examples">
+<div class="example-item">Entrar → Come in</div>
+<div class="example-item">Sair → Go out</div>
+<div class="example-item">Acordar → Wake up</div>
+<div class="example-item">Desistir → Give up</div>
+</div>
+</div>
+</div>
+
+<!-- 6 -->
+<div class="flashcard" onclick="toggle(this)">
+<div class="header">🔵 Vocabulário do Dia a Dia</div>
+<div class="content">
+<div class="question">As palavras equivalem?</div>
+<div class="answer">Muitas vezes não.</div>
+<div class="examples">
+<div class="example-item">Make a call</div>
+<div class="example-item">Take a shower</div>
+<div class="example-item">Make a decision</div>
+<div class="example-item">Pay attention</div>
+<div class="example-item">Miss</div>
+</div>
+</div>
+</div>
+
+<!-- 7 -->
+<div class="flashcard" onclick="toggle(this)">
+<div class="header">🔵 Falsos Cognatos</div>
+<div class="content">
+<div class="question">Palavras parecidas = mesmo sentido?</div>
+<div class="answer">❌ Nem sempre.</div>
+<div class="examples">
+<div class="example-item">Pretend → Fingir</div>
+<div class="example-item">Actually → Na verdade</div>
+<div class="example-item">Eventually → No fim</div>
+<div class="example-item">College → Faculdade</div>
+</div>
+</div>
+</div>
+
+<!-- 8 -->
+<div class="flashcard" onclick="toggle(this)">
+<div class="header">🔵 Gênero Gramatical</div>
+<div class="content">
+<div class="question">Objetos têm gênero?</div>
+<div class="answer">❌ Não em inglês.</div>
+<div class="examples">
+<div class="example-item">🇧🇷 o carro / a mesa</div>
+<div class="example-item">🇺🇸 the car / the table</div>
+</div>
+</div>
+</div>
+
+<!-- 9 -->
+<div class="flashcard" onclick="toggle(this)">
+<div class="header">🔵 Adjetivos</div>
+<div class="content">
+<div class="question">Adjetivos variam?</div>
+<div class="answer">❌ Não.</div>
+<div class="examples">
+<div class="example-item">beautiful car</div>
+<div class="example-item">beautiful house</div>
+</div>
+</div>
+</div>
+
+<!-- 10 -->
+<div class="flashcard" onclick="toggle(this)">
+<div class="header">🔵 Pontuação e Estilo</div>
+<div class="content">
+<div class="question">O estilo muda?</div>
+<div class="answer">✔️ Muito.</div>
+<div class="examples">
+<div class="example-item">🇧🇷 Frases longas</div>
+<div class="example-item">🇺🇸 Frases curtas</div>
+</div>
+</div>
+</div>
+
+<!-- 11 -->
+<div class="flashcard" onclick="toggle(this)">
+<div class="header">🟣 Forma de Pensar</div>
+<div class="content">
+<div class="question">Por que não traduzir?</div>
+<div class="answer">Línguas pensam diferente.</div>
+<div class="examples">
+<div class="example-item">🇧🇷 Você poderia, por gentileza…</div>
+<div class="example-item">🇺🇸 Can you tell me…</div>
+</div>
+</div>
+</div>
+
+<!-- 12 -->
+<div class="flashcard" onclick="toggle(this)">
+<div class="header">📝 Prática Rápida</div>
+<div class="content">
+<div class="practice">
+1️⃣ She ___ you. → misses<br>
+2️⃣ I ___ a decision. → made<br>
+3️⃣ He ___ attention. → paid
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+function toggle(card){
+const c=card.querySelector(".content");
+c.classList.toggle("active");
+}
+</script>
+
+<footer style="text-align:center;margin-top:40px;color:#777;">
+FLASHCARDS 3.0 • Português Brasileiro × Inglês
+</footer>
+
+</body>
+</html>
